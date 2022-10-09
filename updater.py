@@ -12,7 +12,7 @@ path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1]) + '\\'
 
 response = urllib.request.urlopen(
     'https://raw.githubusercontent.com/bepalmet/URF-picker-2/main/URF picker 2.pyw'
-    ).read().decode('utf-8')
+    ).read().decode('utf-8').replace('\n', '')
 
 with open(path, 'w') as file:
     file.write(response)
