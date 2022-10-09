@@ -14,5 +14,5 @@ response = urllib.request.urlopen(
     'https://raw.githubusercontent.com/bepalmet/URF-picker-2/main/URF_picker_2.pyw'
     ).read().decode('utf-8').replace('\n', '')
 
-with open(path + "URF_picker_2.pyw, 'w') as file:
+with open(path + "URF_picker_2.pyw", 'w') as file:
     file.write(response)
