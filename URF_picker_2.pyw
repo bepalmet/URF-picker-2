@@ -41,7 +41,7 @@ def update_program():
     
     if not os.path.exists(path + 'updater.py'):
         try:
-            updater_text = ''.join(urllib.request.urlopen(git_url + '/updater.py').read().decode('utf-8'))
+            updater_text = ''.join(urllib.request.urlopen(git_url + '/updater.py').read().decode('utf-8').replace('\n', '')
             with open(path + 'updater.py', 'w') as updater_file:
                 updater_file.write(updater_text)
         except urllib.error.HTTPError as e:
