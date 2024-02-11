@@ -15,7 +15,7 @@ try:
 except ImportError:
     console_bool = True
 
-version = float(2.01)
+version = float(2.02)
 
 path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1]) + '\\'
 champions_path = path + "Champions"
